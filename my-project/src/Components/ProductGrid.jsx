@@ -1,7 +1,7 @@
 import React from "react";
-import { Star, ShoppingBag, ArrowRight } from "lucide-react";
+import { Star, ArrowRight } from "lucide-react";
 
-export default function ProductGrid({ products }) {
+export default function ProductGrid({ products, onProductClick }) {
   const renderStars = (rating) => {
     return [...Array(5)].map((_, i) => (
       <Star
@@ -35,8 +35,11 @@ export default function ProductGrid({ products }) {
           className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden transform hover:-translate-y-2"
           style={{ animationDelay: `${idx * 100}ms` }}
         >
-          {/* Product Image */}
-          <div className="relative overflow-hidden h-64">
+          {/* Image */}
+          <div
+            className="relative overflow-hidden h-64 cursor-pointer"
+            onClick={() => onProductClick(product)}
+          >
             <img
               src={product.image}
               alt={product.name}
@@ -47,10 +50,9 @@ export default function ProductGrid({ products }) {
                 {product.category}
               </span>
             </div>
-            <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
           </div>
 
-          {/* Product Info */}
+          {/* Info */}
           <div className="p-6">
             <h3 className="text-xl font-bold text-gray-800 mb-2 group-hover:text-purple-600 transition-colors">
               {product.name}
@@ -70,7 +72,11 @@ export default function ProductGrid({ products }) {
                 </p>
                 <p className="text-xs text-gray-500">Free shipping</p>
               </div>
-              <button className="group/btn bg-gradient-to-r from-purple-600 to-pink-600 text-white p-3 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-110 transition-all duration-300">
+
+              <button
+                onClick={() => onProductClick(product)}
+                className="group/btn bg-gradient-to-r from-purple-600 to-pink-600 text-white p-3 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-110 transition-all duration-300"
+              >
                 <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-1 transition-transform" />
               </button>
             </div>
