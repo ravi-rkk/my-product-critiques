@@ -3,9 +3,14 @@ import { Search, ChevronUp } from "lucide-react";
 import Header from "./Header";
 import ProductGrid from "./ProductGrid";
 import Footer from "./Footer";
-import Clothes from "./Images/clothes.jpg"
-import Kiderjoy from "./Images/kiderJoy.png"
-import SouldeStore from "./Images/SouledStore.png"
+import Clothes from "./Images/clothes.jpg";
+import Kiderjoy from "./Images/kiderJoy.png";
+import SouldeStore from "./Images/SouledStore.png";
+import TShirt from "./Images/T-shirt.png";
+import Jeans from "./Images/Jeans.jpg"
+
+
+
 const ProductsPage = () => {
   const [searchTerm, setSearchTerm] = useState("");
 
@@ -21,7 +26,7 @@ const ProductsPage = () => {
     },
     {
       id: 2,
-      name: "Smart Watch Pro",
+      name: "Toys",
       rating: 4.2,
       reviews: 892,
       price: "1999",
@@ -30,7 +35,7 @@ const ProductsPage = () => {
     },
     {
       id: 3,
-      name: "Bluetooth Speaker X",
+      name: "Clothes",
       rating: 4.7,
       reviews: 2156,
       price: "5999",
@@ -39,21 +44,21 @@ const ProductsPage = () => {
     },
     {
       id: 4,
-      name: "4K Action Camera",
+      name: "Harry Potter: Slytherin",
       rating: 4.6,
       reviews: 567,
-      price: "29999",
-      category: "Cameras",
-      image: "camera",
+      price: " 649",
+      category: "Clothes",
+      image: TShirt,
     },
     {
       id: 5,
-      name: "Gaming Mouse RGB",
+      name: "Jeans",
       rating: 4.8,
       reviews: 3421,
       price: "499",
-      category: "Gaming",
-      image: "mouse",
+      category: "jeans",
+      image: Jeans,
     },
     {
       id: 6,
