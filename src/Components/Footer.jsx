@@ -11,14 +11,13 @@ import {
   Truck,
   RefreshCw,
   Star,
-  ArrowRight,
 } from "lucide-react";
 
 export default function Footer() {
   return (
     <footer className="bg-gradient-to-t from-gray-900 via-gray-800 to-gray-900 text-white mt-20">
       <div className="max-w-7xl mx-auto px-6 py-16">
-        <div className="grid md:grid-cols-4 gap-10 mb-12">
+        <div className="grid md:grid-cols-3 gap-10 mb-12">
           {/* Brand & Newsletter */}
           <div className="md:col-span-1">
             <div className="flex items-center gap-3 mb-6">
@@ -33,6 +32,7 @@ export default function Footer() {
               Your trusted destination for honest product reviews and smart shopping decisions.
             </p>
 
+            {/* Newsletter */}
             <div className="flex gap-2">
               <input
                 type="email"
@@ -45,43 +45,10 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Quick Links */}
-          <div>
-            <h4 className="text-lg font-semibold mb-6 text-yellow-300">Quick Links</h4>
-            <ul className="space-y-3">
-              {["All Products", "Top Rated", "New Arrivals", "Best Sellers", "Categories"].map(
-                (link) => (
-                  <li key={link}>
-                    <a
-                      href="#"
-                      className="text-gray-400 hover:text-white transition flex items-center gap-2"
-                    >
-                      <ArrowRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition" />
-                      {link}
-                    </a>
-                  </li>
-                )
-              )}
-            </ul>
-          </div>
+          {/* Empty space (removed Quick Links) */}
+          <div></div>
 
-          {/* Support */}
-          <div>
-            <h4 className="text-lg font-semibold mb-6 text-yellow-300">Support</h4>
-            <ul className="space-y-3">
-              {["Help Center", "Contact Us", "Shipping Info", "Returns", "Privacy Policy"].map(
-                (item) => (
-                  <li key={item}>
-                    <a href="#" className="text-gray-400 hover:text-white transition">
-                      {item}
-                    </a>
-                  </li>
-                )
-              )}
-            </ul>
-          </div>
-
-          {/* Contact */}
+          {/* Contact Info */}
           <div>
             <h4 className="text-lg font-semibold mb-6 text-yellow-300">Contact Info</h4>
             <div className="space-y-4">
@@ -95,13 +62,13 @@ export default function Footer() {
                 <div className="w-10 h-10 bg-purple-600 rounded-lg flex items-center justify-center">
                   <Phone className="w-5 h-5" />
                 </div>
-                <span className="text-gray-400">+91 98765 43210</span>
+                <span className="text-gray-400">+91 7505309687</span>
               </div>
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 bg-purple-600 rounded-lg flex items-center justify-center">
                   <Mail className="w-5 h-5" />
                 </div>
-                <span className="text-gray-400">hello@productverse.in</span>
+                <span className="text-gray-400">rravilesh@gmail.com</span>
               </div>
             </div>
           </div>
@@ -110,7 +77,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-gray-700 pt-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-            <div className="flex items-center gap-8">
+            <div className="flex flex-wrap items-center justify-center gap-6 md:gap-8">
               <div className="flex items-center gap-2">
                 <Shield className="w-5 h-5 text-green-400" />
                 <span className="text-sm text-gray-400">Secure Payments</span>
@@ -140,7 +107,8 @@ export default function Footer() {
           </div>
 
           <div className="mt-8 text-center text-gray-500 text-sm">
-            © 2025 ProductVerse. All rights reserved. Made with <span className="text-red-500">Heart</span> in Hinjawadi, Maharashtra
+            © 2025 ProductVerse. All rights reserved. Made with ❤️ by{" "}
+            <span className="text-red-500 font-medium">Ravilesh</span> in Hinjawadi, Maharashtra
           </div>
         </div>
       </div>

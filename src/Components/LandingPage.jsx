@@ -56,17 +56,7 @@ const LandingPage = () => {
         </p>
 
         {/* Feature Highlights */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
-          {["Real Users", "Verified Reviews", "Instant Insights"].map((feature, idx) => (
-            <div
-              key={idx}
-              className="flex items-center gap-2 bg-white bg-opacity-20 backdrop-blur-md px-5 py-2 rounded-full border border-white border-opacity-30"
-            >
-              <Zap className="w-4 h-4 text-yellow-300" />
-              <span className="text-sm font-medium text-white">{feature}</span>
-            </div>
-          ))}
-        </div>
+      
 
         {/* CTA Button */}
         <button
@@ -78,24 +68,7 @@ const LandingPage = () => {
           <div className="absolute inset-0 rounded-full bg-white opacity-20 scale-0 group-hover:scale-150 transition-transform duration-700"></div>
         </button>
 
-        {/* Trust Indicators */}
-        <div className="mt-16 flex items-center gap-8 text-white text-sm">
-          <div className="flex items-center gap-2">
-            <div className="flex -space-x-2">
-              {[...Array(4)].map((_, i) => (
-                <div
-                  key={i}
-                  className="w-10 h-10 rounded-full border-2 border-white bg-gradient-to-br from-indigo-400 to-purple-400"
-                />
-              ))}
-            </div>
-            <span className="font-medium">10K+ Happy Users</span>
-          </div>
-          <div className="flex items-center gap-1">
-            <Star className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-            <span className="font-medium">4.9/5 Rating</span>
-          </div>
-        </div>
+        
       </div>
 
       {/* Custom Animations */}
